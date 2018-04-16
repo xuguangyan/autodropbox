@@ -1,0 +1,50 @@
+@charset "utf-8";
+/**
+ * jQuery plug：自动完成下拉框
+ * 
+ * @author dasheng
+ * @date 2013-11-02
+ */
+ 
+.autodropbox{ list-style:none; background:#FFF; padding:0px; margin:0px;}
+.autodropbox li{ margin:2px; padding:4px; cursor:pointer;}
+.autodropbox li.active{ background:#CEE7FF;}
+.li_title{ margin:2px; padding:4px; background:#eee;cursor:pointer;}
+.hightlight { color:#F00;}
+
+/**
+ *滚动条样式
+ */
+.tangram-scrollbar {
+	float: left; width: 9px; height: 100%;margin-right: 2px;
+    background: url("../images/scroll-v_g3zzni.gif") no-repeat scroll 3px center transparent;
+}
+.tangram-scrollbar-thumb-btn {
+    background: url("../images/scroll-v_g3zzni.gif") no-repeat scroll -12px center transparent;
+    height: 20%;
+    min-height: 12px;
+    position: relative;
+    width: 100%;
+}
+.tangram-scrollbar-thumb-prev {
+    background: url("../images/scroll-v_g3zzni.gif") repeat scroll -36px 0 transparent;
+    font-size: 0;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.tangram-scrollbar-thumb-next {
+    background: url("../images/scroll-v_g3zzni.gif") repeat scroll -36px -4px transparent;
+    bottom: 0 !important;
+    font-size: 0;
+    height: 4px;
+    position: absolute;
+    width: 100%;
+}
+.arrow_down {
+    background: url("../images/arrow_down.png") no-repeat right center #fff;
+}
+.tangram-scrollpanel-panel { background:#FFFFFF; position:absolute; display:none; border:1px solid #ccc; z-index:9999;}
+.tangram-scrollpanel-content {overflow: hidden; position:relative; float:left;height: 100%;}
+.tangram-scrollContent {position:relative;}

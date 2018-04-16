@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>汉字转换为汉语拼音插件</title>
+<script type="text/javascript" src="pinyin.data.js"></script>
+<script type="text/javascript" src="pinyin.plug.js"></script>
+<script type="text/javascript">
+function clickButton()
+{
+   var s=document.all.testPy.value;
+   alert("转换前是："+s);
+   var s2=pinyin.getCamelChars(s);
+   //var s2=pinyin.getFullChars(s);
+   alert("转换后是："+s2);
+}
+//for(var item in g_polyphone){
+//	console.log(unescape(("\\u"+(1*item).toString(16)).replace(/\\/g, "%"))+" = "+g_polyphone[item]);
+//}
+</script>
+</head>
+<body>
+<input name="testPy" type="text" value="大圣LoveU2013！" />
+<input name="button1" value="转拼音" type="button" onClick="javascript:clickButton();"/>
+</body>
+</html>

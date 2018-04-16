@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自动下拉选项框demo</title>
+<link type="text/css" rel="stylesheet" href="css/jquery.autodropbox.css" />
+
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+
+<script type="text/javascript" src="js/jquery.autodropbox.js"></script>
+<script type="text/javascript" src="js/pinyin.plug/pinyin.data.js"></script>
+<script type="text/javascript" src="js/pinyin.plug/pinyin.plug.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".ln input").autodropbox({            
+		title:'请选街镇名称',
+	    items:[[0,'桂城'],[1,'罗村'],[2,'里水'],[3,'九江'],[4,'丹灶'],[5,'大沥'],[6,'狮山'],[7,'西樵'],[888,'dasheng'],[999,'大圣测试Test']],
+	    //items:['桂城','罗村','里水','九江','丹灶','大沥','狮山','西樵','dasheng','大圣测试Test'],
+		height:250,//固定下拉高度
+		bindData: true,//绑定选项数据（即控件值必须为选项值）
+		change:function(oldVal, newVal){  //值改变事件回调
+			//alert("oldVal="+oldVal+", newVal="+newVal);
+		}
+    }); 
+	$("#countryName").autodropbox({
+		title:'请选国家名称',//下拉选项标题
+	    //items:['China','Japan','North','Korean','India','Australia','America'],//下拉选项列表
+		bindData: true,//绑定选项数据（即控件值必须为选项值）
+		remote:'ajax/test.asp',//访问远程数据url
+		method:'post',//提交方法[post|get]
+		//count:10,//联想词选项数量上限
+		height:250//固定下拉高度
+	}); 
+})
+</script>
+<style type="text/css">
+input{ width:230px; height:25px; margin:10px 10px; line-height:25px; font-size:20px;}
+</style>
+</head>
+<body>
+	<div class="ln"><input type="text" maxlength="128" name="townName" id="townName" value="3" placeholder="请选街镇名称" /><input type="text" maxlength="128" name="cityName" id="cityName" placeholder="请选城市名称" /></div>
+	<input type="text" maxlength="128" name="countryName" id="countryName" value="america" placeholder="请选国家名称" />
+    
+
+</body>
+</html>
